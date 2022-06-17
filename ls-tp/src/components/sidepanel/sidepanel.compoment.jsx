@@ -1,6 +1,7 @@
 import React from "react";
 import { WORDS } from "../constants";
 import WordCompoment from "../words/words.component";
+import "../sidepanel/sidepanel.css";
 
 function SidepanelComponent(){
     let words =[];
@@ -9,7 +10,9 @@ function SidepanelComponent(){
         words.push(WordCompoment(WORDS[i]))
     }
     return(
-        words
+        <div className="sidepanel m-0">
+        {words}
+        </div>
     )
 }
 

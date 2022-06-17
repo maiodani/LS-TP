@@ -51,7 +51,7 @@ function verificaEscrever(tamanho, direcao, l, c, matriz){
     }
     return true;
 }
-function preecheBoardComPalavras(){
+function preecheBoardComPalavras(row,col){
     const WORDS = [
         "angular",
         "bootstrap",
@@ -70,8 +70,8 @@ function preecheBoardComPalavras(){
         2,//esquerda
         3//direita
     ];
-    let lmax = 12;
-    let cmax = 14;
+    let lmax = row;
+    let cmax = col;
     let bidimensional = [];
     let int_usados = [];
     let palavraInt;
@@ -166,14 +166,33 @@ function preecheBoardComPalavras(){
     return bidimensional;
 }
 
+function myScript(){
+    console.log("teste");
+}
+function btnTapped(target){
+    if(!target.classList.contains("found_letter")){
+        target.classList.add("found_letter");
+    }else{
+        target.classList.remove("found_letter");
+    }
+}
+
 function BoardComponent(data){
     let rows =[];
     let matriz = [];
-    matriz = preecheBoardComPalavras();
+    matriz = preecheBoardComPalavras(data.nRow,data.nCol);
     for(let i =0;i<parseInt(data.nRow);i++){
         rows.push(RowComponent(data.nCol,i,matriz[i]));
-    }
-    console.log(rows);
+   }
+
+    window.addEventListener('load', function () {
+        for(let i=0;i<parseInt(data.nRow);i++){
+            for(let j=0;j<parseInt(data.nCol);j++){
+                let aux = document.getElementById(i+"|"+j);
+                aux.onclick = function() {btnTapped(aux);};
+            }
+        }
+    })
     return(
         rows
     )

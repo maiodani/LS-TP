@@ -1,0 +1,12 @@
+.sidepanel{
+    background-color: #EBC3DB;
+    border: 1.5px solid #C09BD8;
+    border-radius: 10px;
+}
+.sidepanel p{
+    font-weight: bold;
+}
+
+.found_word p{
+    color :#9F84BD;
+}
