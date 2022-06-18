@@ -1,19 +1,20 @@
 import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import { WORDS_AVANCADO, WORDS_BASICO, WORDS_INTERMEDIO } from "./components/constants/index";
+import { WORDS_AVANCADO, WORDS_BASICO, WORDS_INTERMEDIO} from "./components/constants/index";
 import { useState } from "react";
 import BoardComponent from "./components/board/board.component";
 import TituloComponent from "./components/titulo/titulo.compoment";
 import SidepanelComponent from './components/sidepanel/sidepanel.compoment';
 import ButtonsComponent from './components/buttons/buttons.component';
 import ScoreComponent from './components/score/score.component';
-import time from './components/time/time.component';
+
 let nCol=0,nRow=0,score=0;
+
 function App() {
 
   const [gameStarted, setGameStarted] = useState(false);
   const [selectedLevel, setSelectedLevel] = useState("0");
-  //const [timer, setTimer] = useState(TIMEOUTGAME);
 
 
     const handleGameStart = () => {
@@ -59,6 +60,7 @@ function App() {
       setGameStarted(false);
     }
   }
+
 
   function removeClasses(){
     let aux = document.querySelectorAll(".found_word");
