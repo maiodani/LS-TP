@@ -51,10 +51,11 @@ function App() {
     }
     if(score==aux){
       console.log("ACABOU")
+      window.alert("Score:"+score);
       score=0;
       document.getElementById("scoreSpan").innerText=score;
       removeClasses();
-      setSelectedLevel(0);
+      setSelectedLevel(1);
       setGameStarted(false);
     }
   }
