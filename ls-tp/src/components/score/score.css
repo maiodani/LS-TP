@@ -1,0 +1,19 @@
+.scoreDiv{
+    font-size: 40px;
+}
+
+.scoreSpan{
+    background-color: #EBC3DB;
+    border: 1.5px solid #C09BD8;
+    border-radius: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.labelDiv{
+    text-align: center;
+}
+.labelSpan{
+    font-size: 20px;
+    font-weight: bold;
+}

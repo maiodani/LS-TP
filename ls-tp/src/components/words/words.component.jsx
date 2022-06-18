@@ -3,7 +3,7 @@ import React from "react";
 function WordCompoment(word){
     let words =[];
     return(
-        <div key={word} className="row text-center p-1">
+        <div key={word} id={word} className="row text-center">
             <p>{word}</p>
         </div>
     )

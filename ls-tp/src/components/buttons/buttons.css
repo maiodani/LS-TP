@@ -1,0 +1,24 @@
+.button{
+    background-color: #EBC3DB;
+    border: 1.5px solid #C09BD8;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.button fieldset select::selection{
+    background-color: transparent;
+    border: 2px solid #C09BD8;
+}
+.button fieldset select{
+    background-color: transparent;
+    border: 2px solid #C09BD8;
+    font-weight: bold;
+}
+.button fieldset select option{
+    background-color: #EBC3DB;
+}
+.button button{
+    background-color: transparent;
+    border: 2px solid #C09BD8;
+    font-weight: bold;
+
+}
